@@ -11,11 +11,11 @@ This repository contains a Docker Compose setup for running WordPress with Nginx
 
 1. Clone this repository:
 
-   git clone https://github.com/abiandreb/wordpress-local-docker
+   ```git clone https://github.com/abiandreb/wordpress-local-docker```
 
 2. Navigate to the cloned repository:
 
-   cd wordpress-docker-compose
+   cd wordpress-local-docker
 
 3. Start the containers:
 
