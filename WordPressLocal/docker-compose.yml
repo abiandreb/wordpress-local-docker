@@ -1,0 +1,29 @@
+version: '3.9'
+
+services:
+  nginx:
+    image: nginx:stable-alpine
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+      - ./wordpress:/var/www/html
+
+  mysql:
+    image: mysql:latest
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_DATABASE: 'wp'
+      MYSQL_USER: 'wp'
+      MYSQL_PASSWORD: '7by9G==z[2596S7^'
+      MYSQL_ROOT_PASSWORD: '7by9G==z[2596S7^'
+    volumes:
+      - ./mysql:/var/lib/mysql
+
+  php:
+    build:
+      context: .
+      dockerfile: ./php/Dockerfile
+    volumes:
+      - ./wordpress:/var/www/html
