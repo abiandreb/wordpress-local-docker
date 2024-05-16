@@ -1,4 +1,4 @@
-# WordPress Docker Compose Setup
+# Setup Wordpress for local development with Docker Compose
 
 This repository contains a Docker Compose setup for running WordPress with Nginx as a web server and PHP-FPM.
 
